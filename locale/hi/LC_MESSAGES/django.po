@@ -1,0 +1,368 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-30 19:15+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\config\settings.py:81
+msgid "English"
+msgstr ""
+
+#: .\config\settings.py:82
+msgid "Hindi"
+msgstr ""
+
+#: .\config\settings.py:83
+msgid "Kannada"
+msgstr ""
+
+#: .\core\context_processors.py:10
+msgid "Temple Road, Holy City"
+msgstr "मंदिर रोड, पवित्र शहर"
+
+#: .\templates\base.html:22 .\templates\base.html:74
+msgid "Home"
+msgstr "होम"
+
+#: .\templates\base.html:23 .\templates\base.html:75
+msgid "About Us"
+msgstr "हमारे बारे में"
+
+#: .\templates\base.html:24 .\templates\core\services.html:7
+msgid "Services & Pujas"
+msgstr "सेवाएँ और पूजा"
+
+#: .\templates\base.html:25 .\templates\base.html:77
+msgid "Events"
+msgstr "कार्यक्रम"
+
+#: .\templates\base.html:42 .\templates\core\home.html:94
+msgid "Donate Now"
+msgstr "अभी दान करें"
+
+#: .\templates\base.html:56
+msgid "A place of divine peace and spiritual awakening."
+msgstr "शांति और आध्यात्मिक जागरण का एक दिव्य स्थान।"
+
+#: .\templates\base.html:72
+msgid "Quick Links"
+msgstr "त्वरित संपर्क"
+
+#: .\templates\base.html:76
+msgid "Pujas"
+msgstr "पूजा"
+
+#: .\templates\base.html:78
+msgid "Donations"
+msgstr "दान"
+
+#: .\templates\base.html:82
+msgid "Contact Us"
+msgstr "संपर्क करें"
+
+#: .\templates\base.html:88
+msgid "Temple Timings"
+msgstr "मंदिर का समय"
+
+#: .\templates\base.html:89
+msgid "Morning: 5:00 AM - 12:00 PM"
+msgstr "सुबह: 5:00 AM - 12:00 PM"
+
+#: .\templates\base.html:90
+msgid "Evening: 4:00 PM - 9:00 PM"
+msgstr "शाम: 4:00 PM - 9:00 PM"
+
+#: .\templates\base.html:91
+msgid "Aarti: 6:00 AM & 7:00 PM"
+msgstr "आरती: 6:00 AM और 7:00 PM"
+
+#: .\templates\base.html:95
+msgid "All rights reserved."
+msgstr "सभी अधिकार सुरक्षित।"
+
+#: .\templates\core\about.html:8
+msgid ""
+"Discover the rich history, spiritual significance, and the community behind "
+"our sacred temple."
+msgstr "हमारे पवित्र मंदिर के समृद्ध इतिहास, आध्यात्मिक महत्व और समुदाय की खोज करें।"
+
+#: .\templates\core\about.html:32
+msgid "Temple Trust & Management"
+msgstr "मंदिर ट्रस्ट और प्रबंधन"
+
+#: .\templates\core\about.html:48
+msgid "Trust members will be updated soon. Add them in the Admin Dashboard!"
+msgstr "ट्रस्ट के सदस्यों को जल्द ही अपडेट किया जाएगा।"
+
+#: .\templates\core\donations.html:7
+msgid "Support Kalyaneshwer Temple"
+msgstr "कल्याणेश्वर मंदिर का समर्थन करें"
+
+#: .\templates\core\donations.html:8
+msgid ""
+"Your contributions help us sustain the daily operations, perform rituals, "
+"and run our community welfare programs."
+msgstr ""
+"आपका योगदान हमें दैनिक संचालन बनाए रखने, अनुष्ठान करने और हमारे सामुदायिक कल्याण "
+"कार्यक्रमों को चलाने में मदद करता है।"
+
+#: .\templates\core\donations.html:16
+msgid "Why Donate?"
+msgstr "दान क्यों करें?"
+
+#: .\templates\core\donations.html:21
+msgid "Annadan (Food Donation)"
+msgstr "अन्नदान (भोजन दान)"
+
+#: .\templates\core\donations.html:22
+msgid ""
+"We feed over 500 needy individuals every day. Your contribution ensures no "
+"one goes hungry."
+msgstr ""
+"हम हर दिन 500 से अधिक जरूरतमंद व्यक्तियों को भोजन कराते हैं। आपका योगदान सुनिश्चित करता "
+"है कि कोई भी भूखा न रहे।"
+
+#: .\templates\core\donations.html:29
+msgid "Temple Maintenance"
+msgstr "मंदिर का रखरखाव"
+
+#: .\templates\core\donations.html:30
+msgid ""
+"Helps preserve the architectural heritage and cleanliness of the temple "
+"premises."
+msgstr "मंदिर परिसर की वास्तुशिल्प विरासत और स्वच्छता को बनाए रखने में मदद करता है।"
+
+#: .\templates\core\donations.html:37
+msgid "Daily Rituals"
+msgstr "दैनिक अनुष्ठान"
+
+#: .\templates\core\donations.html:38
+msgid ""
+"Supports the daily offerings, aarti materials, and floral decorations for "
+"the deity."
+msgstr "देवता के लिए दैनिक प्रसाद, आरती सामग्री और पुष्प सजावट का समर्थन करता है।"
+
+#: .\templates\core\donations.html:45
+msgid "Donation Methods"
+msgstr "दान के तरीके"
+
+#: .\templates\core\donations.html:49
+msgid "Bank Transfer"
+msgstr "बैंक स्थानांतरण"
+
+#: .\templates\core\donations.html:51
+msgid "Account Name:"
+msgstr "खाता धारक का नाम:"
+
+#: .\templates\core\donations.html:51
+msgid "Kalyaneshwer Temple Trust"
+msgstr "कल्याणेश्वर मंदिर ट्रस्ट"
+
+#: .\templates\core\donations.html:52
+msgid "Bank:"
+msgstr "बैंक:"
+
+#: .\templates\core\donations.html:52
+msgid "State Bank of India"
+msgstr "भारतीय स्टेट बैंक"
+
+#: .\templates\core\donations.html:53
+msgid "Account No:"
+msgstr "खाता संख्या:"
+
+#: .\templates\core\donations.html:54
+msgid "IFSC Code:"
+msgstr "आईएफएससी कोड:"
+
+#: .\templates\core\donations.html:55
+msgid "Branch:"
+msgstr "शाखा:"
+
+#: .\templates\core\donations.html:55
+msgid "Main Branch, Holy City"
+msgstr "मुख्य शाखा, पवित्र शहर"
+
+#: .\templates\core\donations.html:60
+msgid "UPI Transfer"
+msgstr "यूपीआई ट्रांसफर"
+
+#: .\templates\core\donations.html:68
+msgid "UPI ID:"
+msgstr "यूपीआई आईडी:"
+
+#: .\templates\core\donations.html:69
+msgid "Scan using any UPI app (GPay, PhonePe, Paytm)"
+msgstr "किसी भी यूपीआई ऐप (GPay, PhonePe, Paytm) का उपयोग करके स्कैन करें"
+
+#: .\templates\core\donations.html:77
+msgid "Note to Devotees"
+msgstr "श्रद्धालुओं के लिए निर्देश"
+
+#: .\templates\core\donations.html:78
+msgid ""
+"All donations to the Kalyaneshwer Temple Trust are eligible for tax "
+"deduction under Section 80G of the Income Tax Act. Please collect your "
+"receipt from the temple administrative office or email us your transaction "
+"details."
+msgstr "कल्याणेश्वर मंदिर ट्रस्ट को दिए गए सभी दान आयकर अधिनियम की धारा 80जी के तहत कर छूट के पात्र हैं। कृपया मंदिर के प्रशासनिक कार्यालय से अपनी रसीद प्राप्त करें या अपने लेनदेन का विवरण हमें ईमेल करें।"
+
+#: .\templates\core\events.html:6
+msgid "Temple Events"
+msgstr "मंदिर के कार्यक्रम"
+
+#: .\templates\core\events.html:7
+msgid ""
+"Join us for upcoming festivals, spiritual gatherings, and relish the "
+"memories of past community events."
+msgstr ""
+"आगामी त्योहारों, आध्यात्मिक समारोहों के लिए हमसे जुड़ें, और पिछले कार्यक्रमों की यादों का "
+"आनंद लें।"
+
+#: .\templates\core\events.html:13
+msgid "Upcoming Events"
+msgstr "आगामी कार्यक्रम"
+
+#: .\templates\core\events.html:35
+msgid "Promotional Video"
+msgstr "प्रचार वीडियो"
+
+#: .\templates\core\events.html:41
+msgid "No upcoming events scheduled at the moment. Please check back later."
+msgstr "इस समय कोई आगामी कार्यक्रम निर्धारित नहीं है। कृपया बाद में देखें।"
+
+#: .\templates\core\events.html:46
+msgid "Past Events & Memories"
+msgstr "पिछले कार्यक्रम और यादें"
+
+#: .\templates\core\events.html:56
+msgid "Held on:"
+msgstr "आयोजित:"
+
+#: .\templates\core\events.html:63
+msgid "Watch Main Video"
+msgstr "मुख्य वीडियो देखें"
+
+#: .\templates\core\events.html:70
+msgid "More Videos:"
+msgstr "अधिक वीडियो:"
+
+#: .\templates\core\events.html:75 .\templates\core\home.html:75
+msgid "Watch Video"
+msgstr "वीडियो देखें"
+
+#: .\templates\core\events.html:91
+msgid "Event Gallery:"
+msgstr "कार्यक्रम गैलरी:"
+
+#: .\templates\core\events.html:102
+msgid "No past events recorded yet."
+msgstr "अभी तक कोई पिछला कार्यक्रम दर्ज नहीं किया गया है।"
+
+#: .\templates\core\home.html:18
+msgid "Spiritual Highlights"
+msgstr "आध्यात्मिक मुख्य अंश"
+
+#: .\templates\core\home.html:31
+msgid "Highlights will be updated soon. Add highlights in the Admin Dashboard!"
+msgstr "मुख्य विशेषताएं जल्द ही अपडेट की जाएंगी।"
+
+#: .\templates\core\home.html:38
+msgid "Our Sacred Services"
+msgstr "हमारी पवित्र सेवाएँ"
+
+#: .\templates\core\home.html:55
+msgid "Services will be updated soon."
+msgstr "सेवाएँ जल्द ही अपडेट की जाएंगी।"
+
+#: .\templates\core\home.html:59
+msgid "View All Services"
+msgstr "सभी सेवाएँ देखें"
+
+#: .\templates\core\home.html:66
+msgid "Temple Gallery"
+msgstr "मंदिर गैलरी"
+
+#: .\templates\core\services.html:8
+msgid ""
+"Explore the divine rituals and spiritual services offered at Kalyaneshwer "
+"Temple."
+msgstr "कल्याणेश्वर मंदिर में प्रस्तुत दिव्य अनुष्ठानों और आध्यात्मिक सेवाओं का अन्वेषण करें।"
+
+#: .\templates\core\services.html:14
+msgid "Special Pujas & Offerings"
+msgstr "विशेष पूजा और प्रसाद"
+
+#: .\templates\core\services.html:15
+msgid ""
+"We perform a variety of rituals to seek the divine blessings. You can book "
+"these pujas in advance by visiting the temple office."
+msgstr ""
+"हम ईश्वरीय आशीर्वाद पाने के लिए विभिन्न प्रकार के अनुष्ठान करते हैं। आप मंदिर कार्यालय में "
+"जाकर इन पूजाओं की अग्रिम बुकिंग कर सकते हैं।"
+
+#: .\templates\core\services.html:34
+msgid "No services available at the moment. Please check back later."
+msgstr "इस समय कोई सेवा उपलब्ध नहीं है। कृपया बाद में देखें।"
+
+#: .\templates\core\services.html:40
+msgid "How to Book"
+msgstr "बुक कैसे करें"
+
+#: .\templates\core\services.html:41
+msgid ""
+"Currently, we accept bookings in person at the Temple Administrative Office. "
+"Online booking facility will be introduced shortly."
+msgstr ""
+"वर्तमान में, हम मंदिर प्रशासनिक कार्यालय में व्यक्तिगत रूप से बुकिंग स्वीकार करते हैं। ऑनलाइन "
+"बुकिंग सुविधा जल्द ही शुरू की जाएगी।"
+
+#: .\templates\core\services.html:42
+msgid ""
+"For urgent queries regarding pujas or special arrangements, please contact "
+"the chief priest's office at"
+msgstr ""
+
+#: .\templates\core\services.html:43
+msgid ""
+"Note: Please arrive 15 minutes before the scheduled time for any booked "
+"puja. Proper traditional attire is requested."
+msgstr ""
+
+#, fuzzy
+#~| msgid "Donations"
+#~ msgid "Syndication"
+#~ msgstr "दान"
+
+#, fuzzy
+#~| msgid "Donations"
+#~ msgid "Duration"
+#~ msgstr "दान"
+
+#~ msgid "Our Spiritual Services"
+#~ msgstr "हमारी आध्यात्मिक सेवाएँ"
+
+#~ msgid ""
+#~ "We offer a variety of authentic Vedic rituals and pujas conducted by our "
+#~ "experienced priests."
+#~ msgstr ""
+#~ "हम अपने अनुभवी पुजारियों द्वारा आयोजित विभिन्न प्रकार के प्रामाणिक वैदिक अनुष्ठान और "
+#~ "पूजा प्रदान करते हैं।"
+
+#~ msgid "Available Pujas"
+#~ msgstr "उपलब्ध पूजा"
+
+#~ msgid "Temple Highlights"
+#~ msgstr "मंदिर की मुख्य विशेषताएं"
+
+#~ msgid "Featured Services"
+#~ msgstr "चुनिंदा सेवाएँ"
+
+#~ msgid "Gallery"
+#~ msgstr "गैलरी"

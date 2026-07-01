@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+<!-- Header Banner -->
+<div style="background: linear-gradient(rgba(139, 0, 0, 0.7), rgba(139, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1600085421712-40156d05f319?q=80&w=2070') center/cover; padding: 6rem 2rem; text-align: center; color: white;">
+    <h1 style="color: var(--gold); font-size: 3.5rem; margin-bottom: 1rem;">{% trans "Services & Pujas" %}</h1>
+    <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">{% trans "Explore the divine rituals and spiritual services offered at Kalyaneshwer Temple." %}</p>
+</div>
+
+<div class="section fade-in" style="max-width: 1200px; margin: 0 auto; padding: 4rem 2rem;">
+    
+    <div style="text-align: center; margin-bottom: 4rem;">
+        <h2 class="section-title">{% trans "Special Pujas & Offerings" %}</h2>
+        <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto;">{% trans "We perform a variety of rituals to seek the divine blessings. You can book these pujas in advance by visiting the temple office." %}</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2.5rem;">
+        {% for service in services %}
+        <div style="background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-md)'">
+            {% if service.image %}
+            <div style="height: 200px; background: url('{{ service.image.url }}') center/cover;"></div>
+            {% else %}
+            <div style="height: 200px; background: var(--saffron-light); display: flex; align-items: center; justify-content: center;">
+                <i class="fa-solid fa-om" style="font-size: 4rem; color: var(--deep-red);"></i>
+            </div>
+            {% endif %}
+            <div style="padding: 2rem;">
+                <h3 style="color: var(--deep-red); font-size: 1.5rem; margin-bottom: 0.5rem;">{{ service.title }}</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">{{ service.description }}</p>
+            </div>
+        </div>
+        {% empty %}
+        <p style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary);">{% trans "No services available at the moment. Please check back later." %}</p>
+        {% endfor %}
+    </div>
+
+    <!-- Booking Info -->
+    <div style="margin-top: 5rem; background: var(--bg-light); padding: 3rem; border-radius: 15px; border-left: 5px solid var(--deep-red); box-shadow: var(--shadow-sm);">
+        <h3 style="color: var(--deep-red); font-size: 1.8rem; margin-bottom: 1rem;">{% trans "How to Book" %}</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">{% trans "Currently, we accept bookings in person at the Temple Administrative Office. Online booking facility will be introduced shortly." %}</p>
+        <p style="color: var(--text-secondary);">{% trans "For urgent queries regarding pujas or special arrangements, please contact the chief priest's office at" %} <strong>{{ site_settings.phone|default:"+91 98765 43210" }}</strong>.</p>
+        <p style="color: var(--text-secondary); margin-top: 1rem; font-size: 0.9rem;"><em>{% trans "Note: Please arrive 15 minutes before the scheduled time for any booked puja. Proper traditional attire is requested." %}</em></p>
+    </div>
+</div>
+{% endblock %}

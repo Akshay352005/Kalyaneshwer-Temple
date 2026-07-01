@@ -1,0 +1,106 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalyaneshwer Temple</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="{% url 'home' %}" class="logo">
+                <i class="fa-solid fa-om logo-icon"></i>
+                <span>Kalyaneshwer Temple</span>
+            </a>
+            <nav class="nav-links">
+                <a href="{% url 'home' %}">{% trans "Home" %}</a>
+                <a href="{% url 'about' %}">{% trans "About Us" %}</a>
+                <a href="{% url 'services' %}">{% trans "Services & Pujas" %}</a>
+                <a href="{% url 'events' %}">{% trans "Events" %}</a>
+            </nav>
+            <div class="nav-actions" style="display:flex; gap:10px; align-items:center;">
+                <form action="{% url 'set_language' %}" method="post" id="lang-form" style="margin: 0;">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                    <select name="language" id="lang-select" style="padding: 0.5rem; border-radius: 5px; border: 1px solid var(--gold); background: var(--deep-red); color: var(--gold); font-weight: bold; cursor: pointer;">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}selected{% endif %} style="color: #333; background: white;">
+                                {{ language.name_local }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </form>
+                <a href="{% url 'donations' %}" class="btn-donate">{% trans "Donate Now" %}</a>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Kalyaneshwer Temple</h3>
+                <p>{% trans "A place of divine peace and spiritual awakening." %}</p>
+                <div class="social-links">
+                    {% if social_links %}
+                        {% for link in social_links %}
+                        <a href="{{ link.url }}" target="_blank" rel="noopener" title="{{ link.get_platform_display }}">
+                            <i class="{{ link.icon_class }}"></i>
+                        </a>
+                        {% endfor %}
+                    {% else %}
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>{% trans "Quick Links" %}</h4>
+                <ul>
+                    <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                    <li><a href="{% url 'about' %}">{% trans "About Us" %}</a></li>
+                    <li><a href="{% url 'services' %}">{% trans "Pujas" %}</a></li>
+                    <li><a href="{% url 'events' %}">{% trans "Events" %}</a></li>
+                    <li><a href="{% url 'donations' %}">{% trans "Donations" %}</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>{% trans "Contact Us" %}</h4>
+                <p><i class="fa-solid fa-location-dot"></i> {{ site_settings.address|default:"Temple Road, Holy City" }}</p>
+                <p><i class="fa-solid fa-phone"></i> {{ site_settings.phone|default:"+91 98765 43210" }}</p>
+                <p><i class="fa-solid fa-envelope"></i> {{ site_settings.email|default:"info@kalyaneshwari.org" }}</p>
+            </div>
+            <div class="footer-col">
+                <h4>{% trans "Temple Timings" %}</h4>
+                <p>{% trans "Morning: 5:00 AM - 12:00 PM" %}</p>
+                <p>{% trans "Evening: 4:00 PM - 9:00 PM" %}</p>
+                <p>{% trans "Aarti: 6:00 AM & 7:00 PM" %}</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kalyaneshwer Temple. {% trans "All rights reserved." %}</p>
+        </div>
+    </footer>
+
+    <script>
+        // Language switcher - submit on change
+        document.getElementById('lang-select').addEventListener('change', function() {
+            document.getElementById('lang-form').submit();
+        });
+    </script>
+</body>
+</html>

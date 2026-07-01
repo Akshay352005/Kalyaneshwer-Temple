@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero fade-in" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)){% if home_content.hero_image %}, url('{{ home_content.hero_image.url }}'){% else %}, url('https://images.unsplash.com/photo-1590050720465-b1a7741d44c9?q=80&w=2070'){% endif %} center/cover; padding: 10rem 2rem; color: white; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 80vh;">
+    <h1 style="font-size: 4rem; color: var(--gold); margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">{{ home_content.hero_title }}</h1>
+    <p style="font-size: 1.5rem; max-width: 800px; margin-bottom: 2rem;">{{ home_content.hero_subtitle }}</p>
+    <div style="display: flex; gap: 1rem;">
+        <a href="{{ home_content.cta_button_link }}" class="btn-donate" style="padding: 1rem 2rem; font-size: 1.2rem;">{{ home_content.cta_button_text }}</a>
+        <a href="{{ home_content.secondary_button_link }}" style="background-color: transparent; border: 2px solid var(--gold); color: var(--gold); padding: 1rem 2rem; border-radius: 5px; font-weight: 600; transition: all 0.3s ease;">{{ home_content.secondary_button_text }}</a>
+    </div>
+</section>
+
+<!-- Highlights Section -->
+<section class="section" style="background-color: var(--white);">
+    <h2 class="section-title">{% trans "Spiritual Highlights" %}</h2>
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        {% for highlight in highlights %}
+        <div style="padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-md); text-align: center; transition: transform 0.3s ease; background-color: var(--bg-light);" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+            {% if highlight.image %}
+            <div style="height: 150px; border-radius: 10px; margin-bottom: 1rem; background: url('{{ highlight.image.url }}') center/cover;"></div>
+            {% else %}
+            <i class="{{ highlight.icon }}" style="font-size: 3rem; color: var(--saffron); margin-bottom: 1rem;"></i>
+            {% endif %}
+            <h3 style="margin-bottom: 1rem;">{{ highlight.title }}</h3>
+            <p>{{ highlight.description }}</p>
+        </div>
+        {% empty %}
+        <p style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary);">{% trans "Highlights will be updated soon. Add highlights in the Admin Dashboard!" %}</p>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Featured Services Section -->
+<section class="section" style="background-color: var(--saffron-light);">
+    <h2 class="section-title">{% trans "Our Sacred Services" %}</h2>
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+        {% for service in services %}
+        <div style="background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-md)'">
+            {% if service.image %}
+            <div style="height: 200px; background: url('{{ service.image.url }}') center/cover;"></div>
+            {% else %}
+            <div style="height: 200px; background: var(--saffron-light); display: flex; align-items: center; justify-content: center;">
+                <i class="fa-solid fa-om" style="font-size: 4rem; color: var(--deep-red);"></i>
+            </div>
+            {% endif %}
+            <div style="padding: 2rem;">
+                <h3 style="color: var(--deep-red); font-size: 1.5rem; margin-bottom: 0.5rem;">{{ service.title }}</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">{{ service.description|truncatewords:20 }}</p>
+            </div>
+        </div>
+        {% empty %}
+        <p style="text-align: center; width: 100%; color: var(--text-secondary);">{% trans "Services will be updated soon." %}</p>
+        {% endfor %}
+    </div>
+    <div style="text-align: center; margin-top: 3rem;">
+        <a href="{% url 'services' %}" class="btn-donate" style="background-color: transparent; border: 2px solid var(--deep-red); color: var(--deep-red);">{% trans "View All Services" %}</a>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+{% if gallery %}
+<section class="section" style="background-color: var(--white);">
+    <h2 class="section-title">{% trans "Temple Gallery" %}</h2>
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        {% for item in gallery %}
+        <div style="border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-md);">
+            {% if item.image %}
+            <div style="height: 250px; background: url('{{ item.image.url }}') center/cover;"></div>
+            {% endif %}
+            {% if item.video_url %}
+            <div style="padding: 1rem; text-align: center;">
+                <a href="{{ item.video_url }}" target="_blank" style="color: var(--deep-red); font-weight: bold;"><i class="fa-solid fa-play"></i> {% trans "Watch Video" %}</a>
+            </div>
+            {% endif %}
+            {% if item.title %}
+            <div style="padding: 1rem; background: var(--white); text-align: center;">
+                <h4>{{ item.title }}</h4>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+<!-- CTA Section -->
+<section class="section" style="background-color: var(--deep-red); color: white; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--gold);">{{ home_content.support_title }}</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem; color: white;">{{ home_content.support_text }}</p>
+        <a href="{% url 'donations' %}" class="btn-donate" style="font-size: 1.2rem; padding: 1rem 2.5rem; border: 2px solid var(--gold); background: transparent; color: var(--gold);">{% trans "Donate Now" %}</a>
+    </div>
+</section>
+{% endblock %}
