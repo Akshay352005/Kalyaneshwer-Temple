@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalyaneshwer Temple - Services & Pujas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-om logo-icon"></i>
+                <span>Kalyaneshwer Temple</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services & Pujas</a>
+                <a href="events.html">Events</a>
+            </nav>
+            <div class="nav-actions" style="display:flex; gap:10px; align-items:center;">
+                <a href="donations.html" class="btn-donate">Donate Now</a>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Header Banner -->
+        <div style="background: linear-gradient(rgba(139, 0, 0, 0.7), rgba(139, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1600085421712-40156d05f319?q=80&w=2070') center/cover; padding: 6rem 2rem; text-align: center; color: white;">
+            <h1 style="color: var(--gold); font-size: 3.5rem; margin-bottom: 1rem;">Services & Pujas</h1>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Explore the divine rituals and spiritual services offered at Kalyaneshwer Temple.</p>
+        </div>
+
+        <div class="section fade-in" style="max-width: 1200px; margin: 0 auto; padding: 4rem 2rem;">
+            
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="section-title">Special Pujas & Offerings</h2>
+                <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto;">We perform a variety of rituals to seek the divine blessings. You can book these pujas in advance by visiting the temple office.</p>
+            </div>
+
+            <div id="services-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2.5rem;">
+                <p style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary);">Loading services...</p>
+            </div>
+
+            <!-- Booking Info -->
+            <div style="margin-top: 5rem; background: var(--bg-light); padding: 3rem; border-radius: 15px; border-left: 5px solid var(--deep-red); box-shadow: var(--shadow-sm);">
+                <h3 style="color: var(--deep-red); font-size: 1.8rem; margin-bottom: 1rem;">How to Book</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">Currently, we accept bookings in person at the Temple Administrative Office. Online booking facility will be introduced shortly.</p>
+                <p style="color: var(--text-secondary);">For urgent queries regarding pujas or special arrangements, please contact the chief priest's office at <strong id="services-phone">+91 98765 43210</strong>.</p>
+                <p style="color: var(--text-secondary); margin-top: 1rem; font-size: 0.9rem;"><em>Note: Please arrive 15 minutes before the scheduled time for any booked puja. Proper traditional attire is requested.</em></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Kalyaneshwer Temple</h3>
+                <p>A place of divine peace and spiritual awakening.</p>
+                <div id="footer-social-links" class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Pujas</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="donations.html">Donations</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-location-dot"></i> <span id="footer-address">Temple Road, Holy City</span></p>
+                <p><i class="fa-solid fa-phone"></i> <span id="footer-phone">+91 98765 43210</span></p>
+                <p><i class="fa-solid fa-envelope"></i> <span id="footer-email">info@kalyaneshwari.org</span></p>
+            </div>
+            <div class="footer-col">
+                <h4>Temple Timings</h4>
+                <p>Morning: 5:00 AM - 12:00 PM</p>
+                <p>Evening: 4:00 PM - 9:00 PM</p>
+                <p>Aarti: 6:00 AM & 7:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kalyaneshwer Temple. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        fetch(`${API_BASE_URL}/api/services/`)
+            .then(res => res.json())
+            .then(services => {
+                const grid = document.getElementById('services-grid');
+                if (Array.isArray(services) && services.length > 0) {
+                    grid.innerHTML = services.map(srv => `
+                        <div style="background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-md)'">
+                            ${srv.image 
+                                ? `<div style="height: 200px; background: url('${formatMediaUrl(srv.image)}') center/cover;"></div>`
+                                : `<div style="height: 200px; background: var(--saffron-light); display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-om" style="font-size: 4rem; color: var(--deep-red);"></i></div>`
+                            }
+                            <div style="padding: 2rem;">
+                                <h3 style="color: var(--deep-red); font-size: 1.5rem; margin-bottom: 0.5rem;">${srv.title}</h3>
+                                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">${srv.description || ''}</p>
+                            </div>
+                        </div>
+                    `).join('');
+                } else {
+                    grid.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary);">No services available at the moment. Please check back later.</p>`;
+                }
+            })
+            .catch(err => console.error('Error fetching services:', err));
+    </script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalyaneshwer Temple - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-om logo-icon"></i>
+                <span>Kalyaneshwer Temple</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services & Pujas</a>
+                <a href="events.html">Events</a>
+            </nav>
+            <div class="nav-actions" style="display:flex; gap:10px; align-items:center;">
+                <a href="donations.html" class="btn-donate">Donate Now</a>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="hero-section" class="hero fade-in" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1590050720465-b1a7741d44c9?q=80&w=2070') center/cover; padding: 10rem 2rem; color: white; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 80vh;">
+            <h1 id="hero-title" style="font-size: 4rem; color: var(--gold); margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Welcome to Kalyaneshwer Temple</h1>
+            <p id="hero-subtitle" style="font-size: 1.5rem; max-width: 800px; margin-bottom: 2rem;">A divine sanctuary for peace, prayer, and spiritual awakening.</p>
+            <div style="display: flex; gap: 1rem;">
+                <a id="cta-btn" href="services.html" class="btn-donate" style="padding: 1rem 2rem; font-size: 1.2rem;">Book a Puja</a>
+                <a id="secondary-btn" href="about.html" style="background-color: transparent; border: 2px solid var(--gold); color: var(--gold); padding: 1rem 2rem; border-radius: 5px; font-weight: 600; transition: all 0.3s ease;">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Highlights Section -->
+        <section class="section" style="background-color: var(--white);">
+            <h2 class="section-title">Spiritual Highlights</h2>
+            <div id="highlights-container" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <p style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary);">Loading highlights...</p>
+            </div>
+        </section>
+
+        <!-- Featured Services Section -->
+        <section class="section" style="background-color: var(--saffron-light);">
+            <h2 class="section-title">Our Sacred Services</h2>
+            <div id="services-container" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+                <p style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary);">Loading services...</p>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="services.html" class="btn-donate" style="background-color: transparent; border: 2px solid var(--deep-red); color: var(--deep-red);">View All Services</a>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery-section" class="section" style="background-color: var(--white); display: none;">
+            <h2 class="section-title">Temple Gallery</h2>
+            <div id="gallery-container" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            </div>
+        </section>
+
+        <!-- CTA Support Section -->
+        <section class="section" style="background-color: var(--deep-red); color: white; text-align: center;">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2 id="support-title" style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--gold);">Support Our Mission</h2>
+                <p id="support-text" style="font-size: 1.2rem; margin-bottom: 2rem; color: white;">Your generous donations help us maintain the temple, perform daily rituals, and support our charitable activities.</p>
+                <a href="donations.html" class="btn-donate" style="font-size: 1.2rem; padding: 1rem 2.5rem; border: 2px solid var(--gold); background: transparent; color: var(--gold);">Donate Now</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Kalyaneshwer Temple</h3>
+                <p>A place of divine peace and spiritual awakening.</p>
+                <div id="footer-social-links" class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Pujas</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="donations.html">Donations</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-location-dot"></i> <span id="footer-address">Temple Road, Holy City</span></p>
+                <p><i class="fa-solid fa-phone"></i> <span id="footer-phone">+91 98765 43210</span></p>
+                <p><i class="fa-solid fa-envelope"></i> <span id="footer-email">info@kalyaneshwari.org</span></p>
+            </div>
+            <div class="footer-col">
+                <h4>Temple Timings</h4>
+                <p>Morning: 5:00 AM - 12:00 PM</p>
+                <p>Evening: 4:00 PM - 9:00 PM</p>
+                <p>Aarti: 6:00 AM & 7:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kalyaneshwer Temple. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        fetch(`${API_BASE_URL}/api/home/`)
+            .then(res => res.json())
+            .then(data => {
+                // Populate Hero
+                if (data.home_content) {
+                    const hc = data.home_content;
+                    if (hc.hero_title) document.getElementById('hero-title').textContent = hc.hero_title;
+                    if (hc.hero_subtitle) document.getElementById('hero-subtitle').textContent = hc.hero_subtitle;
+                    if (hc.cta_button_text) document.getElementById('cta-btn').textContent = hc.cta_button_text;
+                    if (hc.cta_button_link) document.getElementById('cta-btn').href = hc.cta_button_link;
+                    if (hc.secondary_button_text) document.getElementById('secondary-btn').textContent = hc.secondary_button_text;
+                    if (hc.secondary_button_link) document.getElementById('secondary-btn').href = hc.secondary_button_link;
+                    if (hc.support_title) document.getElementById('support-title').textContent = hc.support_title;
+                    if (hc.support_text) document.getElementById('support-text').textContent = hc.support_text;
+
+                    if (hc.hero_image) {
+                        const imgUrl = formatMediaUrl(hc.hero_image);
+                        document.getElementById('hero-section').style.background = `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${imgUrl}') center/cover`;
+                    }
+                }
+
+                // Populate Highlights
+                const highlightsContainer = document.getElementById('highlights-container');
+                if (data.highlights && data.highlights.length > 0) {
+                    highlightsContainer.innerHTML = data.highlights.map(hl => `
+                        <div style="padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-md); text-align: center; transition: transform 0.3s ease; background-color: var(--bg-light);" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                            ${hl.image 
+                                ? `<div style="height: 150px; border-radius: 10px; margin-bottom: 1rem; background: url('${formatMediaUrl(hl.image)}') center/cover;"></div>`
+                                : `<i class="${hl.icon || 'fa-solid fa-bell'}" style="font-size: 3rem; color: var(--saffron); margin-bottom: 1rem;"></i>`
+                            }
+                            <h3 style="margin-bottom: 1rem;">${hl.title}</h3>
+                            <p>${hl.description}</p>
+                        </div>
+                    `).join('');
+                } else {
+                    highlightsContainer.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary);">Highlights will be updated soon.</p>`;
+                }
+
+                // Populate Services
+                const servicesContainer = document.getElementById('services-container');
+                if (data.services && data.services.length > 0) {
+                    servicesContainer.innerHTML = data.services.map(srv => `
+                        <div style="background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-md)'">
+                            ${srv.image 
+                                ? `<div style="height: 200px; background: url('${formatMediaUrl(srv.image)}') center/cover;"></div>`
+                                : `<div style="height: 200px; background: var(--saffron-light); display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-om" style="font-size: 4rem; color: var(--deep-red);"></i></div>`
+                            }
+                            <div style="padding: 2rem;">
+                                <h3 style="color: var(--deep-red); font-size: 1.5rem; margin-bottom: 0.5rem;">${srv.title}</h3>
+                                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">${srv.description || ''}</p>
+                            </div>
+                        </div>
+                    `).join('');
+                } else {
+                    servicesContainer.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary);">Services will be updated soon.</p>`;
+                }
+
+                // Populate Gallery
+                const gallerySection = document.getElementById('gallery-section');
+                const galleryContainer = document.getElementById('gallery-container');
+                if (data.gallery && data.gallery.length > 0) {
+                    gallerySection.style.display = 'block';
+                    galleryContainer.innerHTML = data.gallery.map(item => `
+                        <div style="border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-md);">
+                            ${item.image ? `<div style="height: 250px; background: url('${formatMediaUrl(item.image)}') center/cover;"></div>` : ''}
+                            ${item.video_url ? `<div style="padding: 1rem; text-align: center;"><a href="${item.video_url}" target="_blank" style="color: var(--deep-red); font-weight: bold;"><i class="fa-solid fa-play"></i> Watch Video</a></div>` : ''}
+                            ${item.title ? `<div style="padding: 1rem; background: var(--white); text-align: center;"><h4>${item.title}</h4></div>` : ''}
+                        </div>
+                    `).join('');
+                }
+            })
+            .catch(err => console.error('Error fetching home data:', err));
+    </script>
+</body>
+</html>

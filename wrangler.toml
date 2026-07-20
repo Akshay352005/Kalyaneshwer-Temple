@@ -1,0 +1,11 @@
+name = "kalyaneshwer-temple-backend"
+main = "config/asgi.py"
+compatibility_date = "2026-07-20"
+compatibility_flags = ["python_workers"]
+
+[vars]
+DJANGO_SETTINGS_MODULE = "config.settings"
+CORS_ALLOW_ALL_ORIGINS = "true"
+
+[site]
+bucket = "./static"

@@ -1,0 +1,17 @@
+{
+  "name": "kalyaneshwer-temple-frontend",
+  "version": "1.0.0",
+  "description": "Decoupled static frontend for Kalyaneshwer Temple hosted on Cloudflare Pages",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static build complete'",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "cloudflare-pages",
+    "static-site",
+    "kalyaneshwer-temple"
+  ],
+  "author": "",
+  "license": "ISC"
+}

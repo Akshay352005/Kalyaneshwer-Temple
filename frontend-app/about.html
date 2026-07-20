@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalyaneshwer Temple - About Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-om logo-icon"></i>
+                <span>Kalyaneshwer Temple</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services & Pujas</a>
+                <a href="events.html">Events</a>
+            </nav>
+            <div class="nav-actions" style="display:flex; gap:10px; align-items:center;">
+                <a href="donations.html" class="btn-donate">Donate Now</a>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Header Banner -->
+        <div id="about-banner" style="background: linear-gradient(rgba(139, 0, 0, 0.8), rgba(139, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1590050720465-b1a7741d44c9?q=80&w=2070') center/cover; padding: 6rem 2rem; text-align: center; color: white;">
+            <h1 id="about-title" style="color: var(--gold); font-size: 3.5rem; margin-bottom: 1rem;">About Us</h1>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Discover the rich history, spiritual significance, and the community behind our sacred temple.</p>
+        </div>
+
+        <div class="section fade-in" style="max-width: 1000px; margin: 0 auto; padding: 4rem 2rem;">
+            <!-- Main Content Section -->
+            <div style="display: flex; flex-wrap: wrap; gap: 3rem; margin-bottom: 5rem; align-items: flex-start;">
+                <div id="about-image-wrapper" style="flex: 1; min-width: 300px;">
+                    <img id="about-image" src="https://images.unsplash.com/photo-1600085421712-40156d05f319?q=80&w=1000" alt="Temple History" style="width: 100%; border-radius: 10px; box-shadow: var(--shadow-lg);">
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <div id="about-content" style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8;">
+                        Loading content...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Management Team -->
+            <div style="text-align: center; margin-top: 4rem;">
+                <h2 class="section-title">Temple Trust & Management</h2>
+                <div id="team-container" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 3rem;">
+                    <p style="color: var(--text-secondary);">Loading trust members...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Kalyaneshwer Temple</h3>
+                <p>A place of divine peace and spiritual awakening.</p>
+                <div id="footer-social-links" class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Pujas</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="donations.html">Donations</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-location-dot"></i> <span id="footer-address">Temple Road, Holy City</span></p>
+                <p><i class="fa-solid fa-phone"></i> <span id="footer-phone">+91 98765 43210</span></p>
+                <p><i class="fa-solid fa-envelope"></i> <span id="footer-email">info@kalyaneshwari.org</span></p>
+            </div>
+            <div class="footer-col">
+                <h4>Temple Timings</h4>
+                <p>Morning: 5:00 AM - 12:00 PM</p>
+                <p>Evening: 4:00 PM - 9:00 PM</p>
+                <p>Aarti: 6:00 AM & 7:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kalyaneshwer Temple. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        fetch(`${API_BASE_URL}/api/about/`)
+            .then(res => res.json())
+            .then(data => {
+                if (data.about_content) {
+                    const ac = data.about_content;
+                    if (ac.title) document.getElementById('about-title').textContent = ac.title;
+                    if (ac.content) {
+                        const paragraphs = ac.content.split('\n').filter(p => p.trim() !== '');
+                        document.getElementById('about-content').innerHTML = paragraphs.map(p => `<p style="margin-bottom:1rem;">${p}</p>`).join('');
+                    }
+                    if (ac.image) {
+                        const imgUrl = formatMediaUrl(ac.image);
+                        document.getElementById('about-image').src = imgUrl;
+                        document.getElementById('about-banner').style.background = `linear-gradient(rgba(139, 0, 0, 0.8), rgba(139, 0, 0, 0.8)), url('${imgUrl}') center/cover`;
+                    }
+                }
+
+                const teamContainer = document.getElementById('team-container');
+                if (data.team_members && data.team_members.length > 0) {
+                    teamContainer.innerHTML = data.team_members.map(member => `
+                        <div style="background: var(--white); padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-md); width: 250px;">
+                            <div style="width: 100px; height: 100px; background-color: var(--saffron-light); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                                ${member.image
+                                    ? `<img src="${formatMediaUrl(member.image)}" alt="${member.name}" style="width: 100%; height: 100%; object-fit: cover;">`
+                                    : `<i class="${member.icon || 'fa-solid fa-user'}" style="font-size: 3rem; color: var(--deep-red);"></i>`
+                                }
+                            </div>
+                            <h3 style="margin-bottom: 0.5rem; color: var(--deep-red);">${member.name}</h3>
+                            <p style="color: var(--saffron-dark); font-weight: 600; margin-bottom: 1rem;">${member.role}</p>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">${member.description || ''}</p>
+                        </div>
+                    `).join('');
+                } else {
+                    teamContainer.innerHTML = `<p style="color: var(--text-secondary);">Trust members will be updated soon.</p>`;
+                }
+            })
+            .catch(err => console.error('Error fetching about data:', err));
+    </script>
+</body>
+</html>
