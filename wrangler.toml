@@ -6,6 +6,3 @@ compatibility_flags = ["python_workers"]
 [vars]
 DJANGO_SETTINGS_MODULE = "config.settings"
 CORS_ALLOW_ALL_ORIGINS = "true"
-
-[site]
-bucket = "./static"
